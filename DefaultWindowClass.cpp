@@ -19,7 +19,7 @@ ATOM DefaultWindowClass::registerClass(WNDCLASSEXA* passedClass)
 	return RegisterClassExA(passedClass);
 }
 //As a future base class, defaults are loaded in a prerequisites to other windows.
-void DefaultWindowClass::createDefaultClass()
+void DefaultWindowClass::createDefaultClass(char* page_name)
 {
 	m_currentClass.cbSize = sizeof(WNDCLASSEXA);
 
@@ -30,8 +30,8 @@ void DefaultWindowClass::createDefaultClass()
 	m_currentClass.hIcon = 0;
 	m_currentClass.hCursor = 0;
 	m_currentClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-	m_currentClass.lpszMenuName = "Default";
-	m_currentClass.lpszClassName = "Default";
+	m_currentClass.lpszMenuName = page_name;
+	m_currentClass.lpszClassName = page_name;
 	m_currentClass.hIconSm = 0;
 	m_currentClass.lpfnWndProc = DefaultWindowClass::createChildWndProcedure;
 
@@ -39,6 +39,7 @@ void DefaultWindowClass::createDefaultClass()
 //Window to create passes to child wndproc!
 void DefaultWindowClass::createDefaultWindow(void* windowToCreate)
 {
+	
 	CreateWindowA((LPCSTR)getName(), (LPCSTR)"Default", WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, NULL, NULL, *m_currentInstance, windowToCreate);
 }

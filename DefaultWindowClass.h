@@ -18,7 +18,7 @@ class DefaultWindowClass : public WindowDisplayClass
 		DefaultWindowClass(HINSTANCE* currentInstance, const char* name, WNDPROC window);
 		ATOM registerClass();
 		ATOM registerClass(WNDCLASSEXA*);
-		void createDefaultClass();
+		void createDefaultClass(char* class_name);
 		void createDefaultWindow(void* windowToCreate);
 		virtual LRESULT CALLBACK WndProcedure(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 	protected:

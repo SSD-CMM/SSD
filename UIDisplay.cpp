@@ -9,10 +9,10 @@
 #include <iostream>
 #include <string>
 #include "DefaultWindowClass.h"
-#include "ComedianBookingMenu.h"
+#include "LandingMenu.h"
 // C RunTime Header Files
 #include <math.h>
-
+#include "PageFactory.h"
 #include <objbase.h>
 
 // Global Variables:
@@ -44,11 +44,9 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
 	LoadString(hInstance, IDC_WIN32PROJECT1, szWindowClass, MAX_LOADSTRING);
 
-	ComedianBookingMenu newClass(&hInstance, "Default", NULL);
-	newClass.createDefaultClass();
-	newClass.registerClass();
-	newClass.createDefaultWindow(&newClass);
-	if (!InitInstance(&newClass, nCmdShow))
+	DefaultWindowClass* newClass = PageFactory::createPage("Landing Page", &hInstance);
+
+	if (!InitInstance(newClass, nCmdShow))
 	{
 		return FALSE;
 	}
