@@ -11,7 +11,7 @@ Last Modified By: Christopher Humm
 */
 #pragma once
 #include "WindowDisplayClass.h"
-
+#include "UIFactory.h"
 class DefaultWindowClass : public WindowDisplayClass
 {
 	public:
@@ -25,4 +25,5 @@ class DefaultWindowClass : public WindowDisplayClass
 		WNDCLASSEXA m_currentClass;
 		HWND m_currentWindow;
 		static LRESULT CALLBACK createChildWndProcedure(HWND, UINT, WPARAM, LPARAM);
+		vector<Controls*>active_ui_elements;
 };

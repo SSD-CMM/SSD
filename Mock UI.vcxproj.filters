@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="DefaultWindowClass.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="UIDisplay.cpp" />
+    <ClCompile Include="Win32Startup.cpp" />
+    <ClCompile Include="WindowDisplayClass.cpp" />
+    <ClCompile Include="LandingMenu.cpp" />
+    <ClCompile Include="Controls.cpp">
+      <Filter>UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFactory.cpp">
+      <Filter>UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>UI Elements</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DefaultWindowClass.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Test.h" />
+    <ClInclude Include="UIDisplay.h" />
+    <ClInclude Include="Win32Startup.h" />
+    <ClInclude Include="WindowDisplayClass.h" />
+    <ClInclude Include="LandingMenu.h" />
+    <ClInclude Include="Controls.h">
+      <Filter>UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFactory.h">
+      <Filter>UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>UI Elements</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UIDisplay.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="UIDisplay.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UI Elements">
+      <UniqueIdentifier>{d58e46f6-1710-4309-8c21-af886da1a026}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

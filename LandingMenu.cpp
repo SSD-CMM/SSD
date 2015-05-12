@@ -40,7 +40,6 @@ LRESULT CALLBACK LandingMenu::WndProcedure(HWND hWnd, UINT message, WPARAM wPara
 			{
 			case IDC_COMEDIAN_BOOK:
 			{
-				//MessageBox(NULL, TEXT("Show Comedian Bookings"), TEXT("Chris Humm"), MB_OK);
 				std::cout << "t";
 				createComedianBooking(hWnd);
 			}
@@ -101,7 +100,6 @@ LRESULT CALLBACK LandingMenu::WndProcedure(HWND hWnd, UINT message, WPARAM wPara
 		break;
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
-		// TODO: Add any drawing code here...
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_CREATE:
@@ -338,45 +336,8 @@ void LandingMenu::saveBookedComedian(TCHAR* eventDetails, int size)
 void LandingMenu::createInitialWindow(HWND hWnd)
 {
 	first_run = true;
-	hwndButton = CreateWindow(
-		L"BUTTON",  // Predefined class; Unicode assumed 
-		L"Book Comedians",      // Button text 
-		WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles 
-		250,         // x position 
-		150,         // y position 
-		150,        // Button width
-		100,        // Button height
-		hWnd,     // Parent window
-		(HMENU)IDC_COMEDIAN_BOOK,
-		(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
-		NULL);      // Pointer not needed.
-	////////////////////////////////////////////////////
-	hwndButton2 = CreateWindow(
-		L"BUTTON",  // Predefined class; Unicode assumed 
-		L"Book Customers",      // Button text 
-		WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles 
-		750,         // x position 
-		150,         // y position 
-		150,        // Button width
-		100,        // Button height
-		hWnd,     // Parent window
-		(HMENU)IDC_CUSTOMER_BOOK,
-		(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
-		NULL);      // Pointer not needed.
-	///////////////////////////////////////////
-	////////////////////////////////////////////////////
-	hwndButton3 = CreateWindow(
-		L"BUTTON",  // Predefined class; Unicode assumed 
-		L"View Events",      // Button text 
-		WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON,  // Styles 
-		500,         // x position 
-		150,         // y position 
-		150,        // Button width
-		100,        // Button height
-		hWnd,     // Parent window
-		(HMENU)IDC_EVENT_VIEW,       // No menu.
-		(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
-		NULL);      // Pointer not needed.
+	active_ui_elements = UIFactory::createPageControls("Landing Page", &hWnd, m_currentInstance);
+
 	///////////////////////////////////////////
 	lblObj = CreateWindow(
 		TEXT("static"),

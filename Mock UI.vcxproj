@@ -86,6 +86,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Controls.h" />
     <ClInclude Include="LandingMenu.h" />
     <ClInclude Include="DefaultWindowClass.h" />
     <ClInclude Include="PageFactory.h" />
@@ -94,10 +96,13 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Test.h" />
     <ClInclude Include="UIDisplay.h" />
+    <ClInclude Include="UIFactory.h" />
     <ClInclude Include="Win32Startup.h" />
     <ClInclude Include="WindowDisplayClass.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Controls.cpp" />
     <ClCompile Include="LandingMenu.cpp" />
     <ClCompile Include="DefaultWindowClass.cpp" />
     <ClCompile Include="PageFactory.cpp" />
@@ -107,6 +112,7 @@
     </ClCompile>
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="UIDisplay.cpp" />
+    <ClCompile Include="UIFactory.cpp" />
     <ClCompile Include="Win32Startup.cpp" />
     <ClCompile Include="WindowDisplayClass.cpp" />
   </ItemGroup>

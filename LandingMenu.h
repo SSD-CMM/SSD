@@ -12,6 +12,7 @@ Last Modified By: Christopher Humm
 #pragma once
 #include "DefaultWindowClass.h"
 #include <iostream>
+
 #define IDD_CONTROLSDLG 101
 #define IDD_SIZE_CBO    102
 #define MAX_LOADSTRING 100
