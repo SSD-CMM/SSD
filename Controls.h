@@ -1,7 +1,9 @@
+//Author: Christopher Humm
 #pragma once
 #include <iostream>
 #include <Windows.h>
 
+#define IDC_TITLE_MENU 3
 #define IDD_CONTROLSDLG 101
 #define IDD_SIZE_CBO    102
 #define MAX_LOADSTRING 100

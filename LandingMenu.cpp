@@ -337,44 +337,23 @@ void LandingMenu::createInitialWindow(HWND hWnd)
 {
 	first_run = true;
 	active_ui_elements = UIFactory::createPageControls("Landing Page", &hWnd, m_currentInstance);
-
-	///////////////////////////////////////////
-	lblObj = CreateWindow(
-		TEXT("static"),
-		TEXT("Comedy Club Booking System"),
-		WS_VISIBLE | WS_CHILD,
-		400,
-		6,
-		370,
-		30,
-		hWnd,
-		(HMENU)3,
-		NULL,
-		NULL);
-	HFONT hFont = CreateFont(32, 0, 0, 0, FW_DONTCARE, FALSE, FALSE, FALSE, ANSI_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_SWISS, L"Arial");
-	SendMessage(lblObj, WM_SETFONT, WPARAM(hFont), TRUE);
-
-	////////////////////////////////////////////////////////////////////
-	if (newWindow == true)
-	{
-		hWnd = CreateWindow(
-			szWindowClass,
-			szTitle,
-			WS_OVERLAPPEDWINDOW,
-			CW_USEDEFAULT, CW_USEDEFAULT,
-			500, 100,
-			NULL,
-			NULL,
-			(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
-			NULL
-			);
-		newWindow = false;
-	}
-	/////////////////////////////////////////////////////////////////////////
-	int xpos = 100;            // Horizontal position of the window.
-	int ypos = 100;            // Vertical position of the window.
-	int nwidth = 200;          // Width of the window
-	int nheight = 200;         // Height of the window
-	HWND hwndParent = hWnd; // Handle to the parent window
-
 }
+
+//may need
+/*
+if (newWindow == true)
+{
+	hWnd = CreateWindow(
+		szWindowClass,
+		szTitle,
+		WS_OVERLAPPEDWINDOW,
+		CW_USEDEFAULT, CW_USEDEFAULT,
+		500, 100,
+		NULL,
+		NULL,
+		(HINSTANCE)GetWindowLong(hWnd, GWL_HINSTANCE),
+		NULL
+		);
+	newWindow = false;
+}
+*/

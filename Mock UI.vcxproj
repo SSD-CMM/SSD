@@ -95,6 +95,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Test.h" />
+    <ClInclude Include="Title.h" />
     <ClInclude Include="UIDisplay.h" />
     <ClInclude Include="UIFactory.h" />
     <ClInclude Include="Win32Startup.h" />
@@ -111,6 +112,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="Title.cpp" />
     <ClCompile Include="UIDisplay.cpp" />
     <ClCompile Include="UIFactory.cpp" />
     <ClCompile Include="Win32Startup.cpp" />

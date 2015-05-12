@@ -1,3 +1,4 @@
+//Author: Christopher Humm
 #pragma once
 #include "Controls.h"
 

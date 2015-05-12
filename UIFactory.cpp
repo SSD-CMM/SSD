@@ -16,6 +16,10 @@ vector<Controls*> UIFactory::createPageControls(char* initial_page, HWND* parent
 		Controls* third_button = new Button("View Events", IDC_EVENT_VIEW, parentWindow);
 		third_button->createControl(500, 150, 150, 100);
 		UIElements.push_back(third_button);
+
+		Controls* title_menu = new Title("Comedy Club Booking System", IDC_TITLE_MENU, parentWindow,32);
+		title_menu->createControl(400, 6, 370, 30);
+		UIElements.push_back(title_menu);
 	}
 
 	return UIElements;

@@ -17,6 +17,9 @@
     <ClCompile Include="Button.cpp">
       <Filter>UI Elements</Filter>
     </ClCompile>
+    <ClCompile Include="Title.cpp">
+      <Filter>UI Elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultWindowClass.h" />
@@ -35,6 +38,9 @@
       <Filter>UI Elements</Filter>
     </ClInclude>
     <ClInclude Include="Button.h">
+      <Filter>UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Title.h">
       <Filter>UI Elements</Filter>
     </ClInclude>
   </ItemGroup>
